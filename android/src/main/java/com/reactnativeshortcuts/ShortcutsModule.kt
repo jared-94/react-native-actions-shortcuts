@@ -145,6 +145,16 @@ class ShortcutsModule(reactContext: ReactApplicationContext) :
     fun isSupported(): Boolean {
         return Build.VERSION.SDK_INT >= 25
     }
+
+    @ReactMethod
+    fun addListener(eventName: String) {
+      // Keep: Required for RN built-in Event Emitter Calls.
+    }
+
+    @ReactMethod
+    fun removeListeners(count: Double) {
+      // Keep: Required for RN built-in Event Emitter Calls.
+    }
 }
 
 object NotSupportedException: Throwable("Feature not supported, requires version 25 or above")
